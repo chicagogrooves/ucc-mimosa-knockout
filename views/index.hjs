@@ -27,5 +27,15 @@
     <p>Optimized mode.  You are getting a single RequireJS optimized JavaScript file which includes all the page dependencies.</p>
     {{/optimize}}
 
+    <ul data-bind="foreach: ratings">
+      <li>
+        <label data-bind="text:$data"></label>
+        <input type="radio" name="overall" data-bind="
+        attr:{
+            id: 'rating_'+$data, 
+            value: $data
+          }"/>
+      </li>
+    </ul>
   </body>
 </html>
